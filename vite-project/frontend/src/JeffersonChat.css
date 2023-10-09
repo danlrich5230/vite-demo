@@ -1,0 +1,63 @@
+.jefferson-chat {
+    width: 80%;
+    height: 70vh;
+    background-color: rgba(201, 72, 72, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* ensure children are stacked vertically */
+    gap: 15px;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    height: 100%; /* occupy full height of parent */
+}
+
+.chat-messages {
+    flex: 1; /* take up all available space */
+    overflow-y: auto; /* allow scrolling for messages */
+    margin-bottom: 10px; /* space between messages and input */
+    gap: 15px; /* space between messages */
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    background-color: #3082d4;
+}
+
+.chat-message.system,
+.chat-message.jefferson {
+    background-color: #28a110;
+}
+
+.chat-input {
+    display: flex;
+    flex-direction: column; /* stack input and button vertically */
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* space between input and button */
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
